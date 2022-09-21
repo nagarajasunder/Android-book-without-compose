@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_daas.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/fragment_payment.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/fragment_qr_code.xml" value="0.35520833333333335" />
       </map>
     </option>
   </component>
