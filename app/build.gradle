@@ -8,16 +8,20 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.geekydroid.androidbook"
-        minSdk 21
+        minSdk 24
         targetSdk 32
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled true
     }
 
     buildTypes {
@@ -93,11 +97,17 @@ dependencies {
     kapt "com.google.dagger:hilt-android-compiler:2.41"
     implementation 'com.google.dagger:dagger-android-support:2.41'
 
+    implementation "androidx.security:security-crypto:1.0.0"
+
+    // Jetpack crypto library
+    implementation "androidx.security:security-identity-credential:1.0.0-alpha03"
+    implementation "androidx.security:security-app-authenticator:1.0.0-alpha02"
 
     testImplementation "androidx.arch.core:core-testing:$arch_version"
     testImplementation "androidx.lifecycle:lifecycle-runtime-testing:$lifecycle_version"
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
     androidTestImplementation "androidx.work:work-testing:$work_version"
     implementation "androidx.work:work-multiprocess:$work_version"
+    androidTestImplementation "androidx.security:security-app-authenticator:1.0.0-alpha02"
 
 }
