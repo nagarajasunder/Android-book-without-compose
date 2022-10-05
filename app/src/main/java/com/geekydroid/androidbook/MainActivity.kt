@@ -27,32 +27,12 @@ class MainActivity : AppCompatActivity() {
         binding.lifecycleOwner = this
 
         binding.btnStore.setOnClickListener {
-            storeEncryptedData()
+            viewmodel.storeEncryptedData()
         }
         binding.btnRetrieve.setOnClickListener {
-            retrieveEncryptedData()
+            viewmodel.fetchSecuredData()
         }
 
     }
 
-    private fun retrieveEncryptedData() {
-        //val value = EncryptedSharedPrefManager.getStringValue(applicationContext,"access_token")
-        val file = File(filesDir,"secret.txt")
-        val messageDecrypted = cryptoManager.decrypt(FileInputStream(file)).decodeToString()
-        viewmodel.updateValue(messageDecrypted)
-    }
-
-    private fun storeEncryptedData() {
-        val value = viewmodel.valueToStore.value
-        val bytes = value!!.encodeToByteArray()
-        val file = File(filesDir,"secret.txt")
-        if (!file.exists())
-        {
-            file.createNewFile()
-        }
-        val fos = FileOutputStream(file)
-        val encryptedMessage = cryptoManager.encrypt(bytes,fos).decodeToString()
-        viewmodel.updateValue(encryptedMessage)
-        //EncryptedSharedPrefManager.saveString(applicationContext,"access_token",value!!)
-    }
 }
