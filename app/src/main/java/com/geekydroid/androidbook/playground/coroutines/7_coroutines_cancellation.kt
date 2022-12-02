@@ -4,7 +4,7 @@ import kotlinx.coroutines.*
 
 fun main() = runBlocking {
     val startTime = System.currentTimeMillis()
-    val job = launch(Dispatchers.Default) {
+    val parentJob = launch(Dispatchers.Default) {
         var nextPrintTime = startTime
         var i = 0
         while (i < 5) {
@@ -20,7 +20,7 @@ fun main() = runBlocking {
     }
     delay(1200L)
     println("main:I'm tired of waiting")
-    job.cancelAndJoin()
+    parentJob.cancelAndJoin()
     println("main:Now I quit")
 }
 

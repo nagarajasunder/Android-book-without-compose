@@ -1,7 +1,6 @@
 package com.geekydroid.androidbook.playground.coroutines
 
 import kotlinx.coroutines.*
-import java.lang.Math.random
 
 @OptIn(DelicateCoroutinesApi::class)
 fun main() = runBlocking {
