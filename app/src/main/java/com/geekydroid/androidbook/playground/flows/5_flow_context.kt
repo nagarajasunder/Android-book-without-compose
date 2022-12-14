@@ -2,10 +2,7 @@ package com.geekydroid.androidbook.playground.flows
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.runBlocking
 
 fun main() = runBlocking {
@@ -20,8 +17,14 @@ suspend fun flowFun(): Flow<Int> = flow {
         log("Emitting $i")
         emit(i)
     }
-}.flowOn(Dispatchers.IO)
+}.map {
+    log("First map $it")
+    it
+}.flowOn(Dispatchers.Default).map {
+        log("Second map $it")
+        it
+    }.flowOn(Dispatchers.IO)
 
-fun log(msg:String) {
+fun log(msg: String) {
     println("[${Thread.currentThread().name}] $msg")
 }
