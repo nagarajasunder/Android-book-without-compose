@@ -104,4 +104,5 @@ dependencies {
     androidTestImplementation "androidx.work:work-testing:$work_version"
     implementation "androidx.work:work-multiprocess:$work_version"
 
+    implementation 'com.github.funriser:StepProgress:0.1.0'
 }

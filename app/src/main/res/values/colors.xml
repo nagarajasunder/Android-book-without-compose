@@ -5,6 +5,101 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorGrey">#686565</color>
+    <color name="colorPrimary">@color/appbasecolor</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">@color/appbasecolor</color>
+    <color name="color_progress">#FBA437</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey_color">#80bebebe</color>
+    <color name="trans_overlay">#80bebebe</color>
+    <color name="card_overlay">#1e000000</color>
+    <color name="dim_overlay">#CC000000</color>
+    <color name="title_color">#808080</color>
+    <color name="login_blue">#057AFB</color>
+    <!-- <color name="tabs_back">#E0E0E0</color> -->
+    <color name="tabs_bg">#EEE9E9</color>
+    <color name="red">#E93D3D</color>
+    <color name="status_bar_red">#BA3030</color>
+    <color name="black">#2f2f2f</color>
+    <color name="appbasecolor">#fbbb00</color>
+    <color name="notifi_color">#FCD359</color>
+    <color name="title_back">#F4F5F7</color>
+    <color name="acc_back">#F4F4F4</color>
+    <color name="button_background">#555555</color>
+    <color name="edittext_hint">#a4a4a4</color>
+    <color name="edittext_font">#A5A5A5</color>
+    <color name="forgot_pwd_black">#2d2d2d</color>
+    <color name="tab_name_color">#4a4a4a</color>
+    <color name="tab_unselected_name_color">#999</color>
+    <color name="new_tabs_bg">#f5f5f7</color>
+    <color name="product_list_bg">#efefef</color>
+    <color name="white">#FFFFFF</color>
+    <color name="lynk_base">#fbbb00</color>
+    <color name="green">#00ff00</color>
+    <color name="green_color">#06B43B</color>
+    <color name="status_bar_green_color">#04902F</color>
+    <color name="f9">#f9f9f9</color>
+    <color name="f56">#565656</color>
+    <color name="view_color">#d0d0d0</color>
+    <color name="finished_color">#ff0202</color>
+    <color name="unfinished_color">#E4E4E4</color>
+    <color name="cod_color">#FB3778</color>
+    <color name="f0">#f0f0f0</color>
+    <color name="alert_background">#DD000000</color>
+
+    <color name="color_3333">#333333</color>
+    <color name="color_56">#565656</color>
+
+    <!--MBG Color Codes -->
+
+    <color name="mbg_red">#ff0202</color>
+    <color name="mbg_value">#444444</color>
+    <color name="mbg_green">#2cd45f</color>
+    <color name="mbg_bg">#f9f9f9</color>
+
+    <color name="actionBarColor">#333333</color>
+    <color name="promotionColor">#fb3778</color>
+    <color name="promotionColor_press">@color/green</color>
+
+    <color name="driverEarningMoneyColor">#7AC09C</color>
+    <color name="text_titleColor">#333333</color>
+    <color name="text_titleColor_grey">#777777</color>
+    <color name="minus_cta_grey">#999999</color>
+    <color name="text_2color">#898989</color>
+    <color name="tool_bar">#333333</color>
+    <color name="light_text">#898989</color>
+    <color name="card_tittle_color">#565656</color>
+
+    <color name="pickup_location_color">#01b36c</color>
+    <color name="dest_location_color">#ff0202</color>
+    <color name="location_text_light">#898989</color>
+
+    <color name="lightgray">#e7e7e7</color>
+    <color name="lightgray02">#bfbfbf</color>
+    <color name="lightgray_eee">#EEEEEE</color>
+    <color name="orrange">#e33d1b</color>
+    <color name="text_hint_a9">#a9a9a9</color>
+
+    <color name="stpi_default_color">#dddddd</color>
+    <color name="cash_collect_bg_color">#0b8f46</color>
+    <color name="cash_collect_share_overlay">#22000000</color>
+    <color name="text_color">#565656</color>
+
+    <color name="barcode_reticle_background">#99000000</color>
+    <color name="barcode_reticle_stroke">#40000000</color>
+    <color name="currency_bg_color">#F0F0F0</color>
+    <color name="payment_gradient_start">#FBBB00</color>
+    <color name="payment_gradient_end">#FB9A00</color>
+    <color name="payment_green">#29BE6E</color>
+    <color name="red_bg">#22FF0202</color>
+    <color name="error_text_color">#EF3B4D</color>
+    <color name="light_yellow">#FFF8E6</color>
+    <color name="upi_discount">#7B61FF</color>
+    <color name="pale_pink_light">#FEE6D6</color>
+    <color name="pale_pink_dark">#FED6D6</color>
+    <color name="light_sky_blue">#EBF8F8</color>
 </resources>
