@@ -8,7 +8,7 @@ import kotlinx.coroutines.runBlocking
 fun simple(): Flow<Int> = flow {
     println("Flow Started")
    for (i in 1..3) {
-       delay(1000)
+       delay(100)
        emit(i)
    }
 }
