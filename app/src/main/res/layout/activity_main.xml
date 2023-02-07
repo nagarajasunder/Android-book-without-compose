@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
     <com.geekydroid.androidbook.customviews.CircularActivityIndicator
         android:id="@+id/custom_layout"
         android:layout_width="match_parent"
