@@ -7,7 +7,7 @@
 
 
 
-    <com.geekydroid.androidbook.customviews.CircularActivityIndicator
+    <com.geekydroid.androidbook.customviews.PointsDrawer
         android:id="@+id/custom_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

@@ -28,6 +28,7 @@ class CircularActivityIndicator(context: Context, attributeSet: AttributeSet) :
     private var backgroundBitmap: Bitmap? = BitmapFactory.decodeResource(context.resources, R.drawable.androidsample)
     private lateinit var sourceRect: Rect
     private lateinit var destRect: Rect
+    private lateinit var circularMatrix: Matrix
 
     companion object {
         private val PRESSED_FG_COLOR: Int = Color.argb(100, 75, 123, 245)
@@ -108,6 +109,10 @@ class CircularActivityIndicator(context: Context, attributeSet: AttributeSet) :
             sourceRect.bottom = backgroundBitmap!!.height
         }
         destRect = Rect()
+        circularMatrix = Matrix()
+        circularMatrix.postScale(0.5f,0.2f)
+        circularMatrix.postTranslate(104F, 700F)
+
     }
 
     private fun endGesture() {
@@ -137,8 +142,8 @@ class CircularActivityIndicator(context: Context, attributeSet: AttributeSet) :
 //            destRect.left = horMargin
 //            destRect.right = horMargin + bitmapSize
 //            destRect.bottom = verMargin + bitmapSize
-            configureBitmapDimensions()
-            canvas?.drawBitmap(backgroundBitmap!!,sourceRect,destRect,null)
+            //configureBitmapDimensions()
+            canvas?.drawBitmap(backgroundBitmap!!,matrix,null)
         } else {
             Toast.makeText(context,"Bitmap null",Toast.LENGTH_SHORT).show()
         }
@@ -206,8 +211,9 @@ class CircularActivityIndicator(context: Context, attributeSet: AttributeSet) :
         val bitmapWidth = backgroundBitmap!!.width
         val bitmapHeight = backgroundBitmap!!.height
         if ((bitmapWidth > bitmapHeight && height > width) ||
-            (bitmapWidth <= bitmapHeight && width >= height)
+            (bitmapWidth <= bitmapHeight && height <= width)
         ) {
+            Toast.makeText(context,"Inside if",Toast.LENGTH_SHORT).show()
             val ratio = height.toFloat()/bitmapHeight
             val scaledWidth = (bitmapWidth * ratio).toInt()
             destRect.top = 0
@@ -216,11 +222,11 @@ class CircularActivityIndicator(context: Context, attributeSet: AttributeSet) :
             destRect.right = destRect.left + scaledWidth
         } else {
             val ratio = width.toFloat()/bitmapWidth
-            val scaledWidth = (bitmapHeight * ratio).toInt()
+            val scaledHeight = (bitmapHeight * ratio).toInt()
             destRect.left = 0
             destRect.right = width
             destRect.top = 0
-            destRect.bottom = scaledWidth
+            destRect.bottom = scaledHeight
         }
     }
 
