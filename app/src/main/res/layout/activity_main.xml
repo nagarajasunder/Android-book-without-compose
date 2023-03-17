@@ -11,19 +11,27 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btn_post_notification"
+            android:id="@+id/btn_show_floating_widget"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Post Notification"/>
+            android:text="Show Floating Widget" />
 
         <Button
-            android:id="@+id/btn_start_service"
+            android:id="@+id/btn_hide_floating_widget"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_post_notification"
+            android:layout_below="@+id/btn_show_floating_widget"
             android:layout_centerHorizontal="true"
-            android:text="Start Service"/>
+            android:text="Hide Floating Widget"/>
+
+        <Button
+            android:id="@+id/btn_check_service_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_hide_floating_widget"
+            android:layout_centerHorizontal="true"
+            android:text="Check Service Status"/>
 
     </RelativeLayout>
 </layout>
