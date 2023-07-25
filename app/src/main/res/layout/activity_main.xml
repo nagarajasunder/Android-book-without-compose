@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -10,41 +11,89 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/iv_previous_day"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/baseline_keyboard_double_arrow_left_24"
-            android:clickable="true"
-            android:focusable="true"
-            android:layout_centerVertical="true"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            tools:ignore="ContentDescription" />
-
-
-
-        <com.geekydroid.androidbook.HorizontalDatePicker
-            android:id="@+id/horizontal_date_picker"
+        <TextView
+            android:id="@+id/tv_location_updates"
+            style="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toStartOf="@+id/iv_next_day"
-            android:layout_toEndOf="@+id/iv_previous_day"
-            android:layout_alignParentTop="true"/>
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Shared Flow" />
 
-        <ImageView
-            android:id="@+id/iv_next_day"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/baseline_keyboard_double_arrow_right_24"
-            android:clickable="true"
-            android:focusable="true"
-            android:layout_centerVertical="true"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/tv_flow_alive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_location_updates"
+            android:layout_margin="6dp"
+            android:text="Flow Alive Tester"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btn_observer_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_flow_alive"
+            android:text="Start Observer 1"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tv_collector_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btn_observer_1"
+            android:text="Observer 1 collector"
+            android:textSize="20sp"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:id="@+id/btn_observer_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_collector_1"
+            android:text="Start Observer 2"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tv_collector_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btn_observer_2"
+            android:text="Observer 2 collector"
+            android:textSize="20sp"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:id="@+id/btn_stop_observer_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_collector_2"
+            android:text="Stop Observer 1"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btn_stop_observer_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_stop_observer_1"
+            android:text="Stop Observer 2"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btn_start_flow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp"
+            android:layout_below="@+id/btn_stop_observer_2"
+            android:text="Start Shared Flow"/>
+
 
     </RelativeLayout>
 </layout>
